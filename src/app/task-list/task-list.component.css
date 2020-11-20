@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+.container {
+  width: 70%;
+  margin: 30px auto;
+}
+h1{
+  margin-bottom: 10px;
+}
+form {
+  margin: 30px 0;
+}
+
+.inputAdd {
+  width: 70%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.AddBtn {
+  border: none;
+  margin-left: 5px;
+  width: 28%;
+  height: 30px;
+  background-color: rgb(77, 126, 77);
+  color: white;
+  cursor: pointer;
+}
+.AddBtn:disabled{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.AddBtn:hover {
+  background-color: rgb(2, 65, 2);
+}
+
+#table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border-top: 2px solid rgb(136, 133, 133);
+  border-bottom: 2px solid rgb(136, 133, 133);
+  font-size: 15px;
+  padding: 10px;
+  height: 50px;
+}
+
+table tr {
+  text-align: center;
+}
+
+.trHover:hover{
+  background-color: rgba(213, 218, 201, 0.623);
+}
+
+
+td {
+  border-bottom: 1px solid rgba(202, 200, 200, 0.493);
+  font-size: 15px;
+  padding: 15px;
+}
+
+.editBtn {
+  width: 60px;
+  height: 35px;
+  border: 1px solid darkkhaki;
+  border-radius: 5px;
+  color: sandybrown;
+  margin-top: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.editBtn:hover {
+  background-color: darkkhaki;
+  color: white;
+}
+
+.successDelete {
+  width: 60px;
+  height: 35px;
+  border: 1px solid darkred;
+  border-radius: 5px;
+  color: darkred;
+  margin-top: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.successDelete:hover {
+  background-color: darkred;
+  color: white;
+}
+.disabled{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.done {
+  color: olivedrab;
+}
+
+.inProgress {
+  color: tomato;
+}
+
+.formEdit {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  height: 50px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid darkkhaki;
+  border-radius: 5px;
+}
+
+.editTask {
+  width: 50%;
+  height: 25px;
+  text-align: center;
+}
+
+.saveBtn {
+  width: 45%;
+  height: 25px;
+  border: none;
+  background-color: rgb(170, 189, 103);
+  color: white;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background-color: rgb(121, 139, 15);
+}

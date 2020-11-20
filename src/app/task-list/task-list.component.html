@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="main">
+    <h1>Plan your Day!</h1>
+    <h2>User : {{user}}. Count of Tasks : {{countTask}} .</h2>
+    <form name="form">
+      <input [(ngModel)]="inputNewTask" name="inputNewTask" class="inputAdd" type="text">
+      <input (click)=" addTask()" [disabled]="!inputNewTask" class="AddBtn" type="button" value="Add">
+    </form>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Task</th>
+          <th>Check</th>
+          <th>Done/In progress</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="trHover" *ngFor="let task of tasks; let i=index">
+          <td>{{ i+1 }}.</td>
+          <td>{{ task.task }}</td>
+          <td><input type="checkbox" name="checkbox" (change)="onChange($event, i)"></td>
+          <td [ngClass]="task.check?'done':'inProgress'">{{task.status}}</td>
+          <td><button class="editBtn" (click)="editTask(i)">Edit</button></td>
+          <td>
+              <button [ngClass]="task.check?'successDelete':'disabled'" [disabled]="!task.check" class="successDelete"
+                      (click)="deleteTask(i)">Delete
+               </button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="editStatus" class="formEdit">
+    <input class="editTask" type="text" [(ngModel)]="taskToEdit" name="taskToEdit">
+    <input class="saveBtn" type="button" (click)="saveEditTask()" value="Save">
+  </div>
+
+
+</div>
